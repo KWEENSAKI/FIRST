@@ -12,8 +12,9 @@ you are given this log containing a list of users who tried accessing the compan
 # solution
 
 
-logs = ["192.168.1.2, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "172.23.44.51, tried to access this server but failed", "192.43.22.1, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "172.23.44.51, tried to access this server but failed"]
+logs = ["192.168.1.2, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "172.23.44.51, tried to access this server but failed",
+        "192.43.22.1, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "192.123.23.22, tried to access this server but failed", "172.23.44.51, tried to access this server but failed"]
 
-peter = max(logs, key=logs.count)
-rita = peter[:-40]
-print(rita)
+max_feedback = max(logs, key=logs.count)
+max_IP_feedback = max_feedback[:-40]
+print(max_IP_feedback)
